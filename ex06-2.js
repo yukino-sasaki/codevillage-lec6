@@ -9,9 +9,19 @@ const items = [
 const sums = items.map((item) => {
     // ここを埋める
     sum = 0
-    for (i = 0; i <= 6; ++i) {
+    for (i = 0; i <= items.length; ++i) {
         sum += item[i];
     }
     return sum;
 })
 console.log(sums) //=> [424, 313, 291, 379]
+
+
+
+const itemmap = items.map((item) => {
+
+    return item.reduce((x, y) => x + y);
+})
+
+
+console.log(itemmap)
